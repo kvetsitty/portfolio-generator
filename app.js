@@ -1,19 +1,15 @@
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-console.log(profileDataArgs);
+const profileDataArgs = process.argv.slice(2);
 
-//notice the lack of parentheses around the 'profileDataArr' parameter?
-const printProfileData = (profileDataArr) => {
-    //This...
-    for (let i = 0; i < profileDataArr.length; i += 1) {
+const printProfileData = profileDataArr => {
+  // This...
+  for (let i = 0; i < profileDataArr.length; i += 1) {
     console.log(profileDataArr[i]);
-    }
+  }
 
-    console.log("==============");
+  console.log('================');
 
-    //Is the same as this...
-    profileDataArr.forEach((profileItem) => {
-        console.log(profileItem)
-    });
+  // Is the same as this...
+  profileDataArr.forEach(profileItem => console.log(profileItem));
 };
 
 printProfileData(profileDataArgs);
