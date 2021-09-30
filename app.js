@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-console.log(profileDataArgs);
-
-//notice the lack of parentheses around the 'profileDataArr' parameter?
-const printProfileData = (profileDataArr) => {
-    //This...
-    for (let i = 0; i < profileDataArr.length; i += 1) {
-    console.log(profileDataArr[i]);
-    }
-
-    console.log("==============");
-
-    //Is the same as this...
-    profileDataArr.forEach((profileItem) => {
-        console.log(profileItem)
-    });
-};
-
-printProfileData(profileDataArgs);
-
-=======
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template.js');
 const { writeFile, copyFile } = require('./utils/generate-site.js');
@@ -171,4 +149,3 @@ promptUser()
     .catch(err => {
         console.log(err);
     });
->>>>>>> develop
